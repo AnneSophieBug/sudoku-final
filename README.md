@@ -12,7 +12,7 @@
 Dans le cadre du projet de programmation de Master1, nous avons décidé de créer, grâce à python, un jeu de Sudoku. Le code est disponible dans ce repository actuel. Il a été découpé de la manière suivante : 
 
 Dans le fichier "main" se trouve le code à exécuter afin de générer la grille.
-Dans le fichier .....
+Dans le fichier ....
 Enfin, dans le fichier "Publipostage" se trouve un autre code sur lequel nous reviendrons un peu plus loin.
 
 La finalité de notre projet est de pouvoir partager le jeu que nous avons créé à plusieurs personnes afin de se défier en tentant d'obtenir le meilleur score possible.
