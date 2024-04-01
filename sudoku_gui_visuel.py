@@ -62,13 +62,13 @@ class SudokuGUI:
         
         # Boutons pour les niveaux de difficulté
         self.difficulty_label = tk.Label(self.root, text="Niveau de difficulté :")
-        self.difficulty_label.grid(row=0, column=3, columnspan=3, pady=5)
+        self.difficulty_label.grid(row=0, column=3, columnspan=2, pady=4)
         self.easy_button = tk.Button(self.root, text="Facile", command=lambda: self.generer_grille_partielle_facile(True))
         self.easy_button.grid(row=1, column=3, columnspan=3, pady=5)
         self.medium_button = tk.Button(self.root, text="Moyen", command=lambda: self.generer_grille_partielle_moyen(True))
         self.medium_button.grid(row=1, column=5, columnspan=3, pady=5)
         self.hard_button = tk.Button(self.root, text="Difficile", command=lambda: self.generer_grille_partielle_difficile(True))
-        self.hard_button.grid(row=1, column=7, columnspan=3, pady=5)
+        self.hard_button.grid(row=1, column=8, columnspan=3, pady=5)
         
         # Bouton "Nouvelle partie"
         self.new_game_button = tk.Button(self.root, text="Nouvelle partie", command=self.nouvelle_partie)
@@ -88,11 +88,11 @@ class SudokuGUI:
         self.rules_button = Button(
             self.root, text="Règles", command=lambda: afficher_regles(self.root)
         )
-        self.rules_button.grid(row=0, column=10, columnspan=3, pady=5)
+        self.rules_button.grid(row=0, column=12, columnspan=3, pady=5)
         
         # Bouton "Effacer"
         self.clear_button = Button(self.root, text="Effacer", command=self.effacer_case)
-        self.clear_button.grid(row=4, column=10, columnspan=3, pady=5)
+        self.clear_button.grid(row=4, column=8, columnspan=3, pady=5)
         
         # Affichage du score
         self.score_label = tk.Label(self.root, text="Score : "+str(score), font=("Arial, 13"))
@@ -100,11 +100,11 @@ class SudokuGUI:
         
         # Bouton "Pause"
         self.pause_button = tk.Button(self.root, text="Pause", command=pause_chronometer)
-        self.pause_button.grid(row=3, column=7, columnspan=3, pady=5)
+        self.pause_button.grid(row=3, column=8, columnspan=3, pady=5)
         
         # Bouton "Reprendre"
         self.resume_button = tk.Button(self.root, text="Reprendre", command=resume_chronometer, state=tk.DISABLED)
-        self.resume_button.grid(row=3, column=10, columnspan=3, pady=5)
+        self.resume_button.grid(row=3, column=12, columnspan=3, pady=5)
         
         # Bouton "Aide"
         self.hint_button = tk.Button(self.root, text="Aide", command=self.show_hint)
