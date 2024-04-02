@@ -68,22 +68,26 @@ def generer_grille_partielle_facile(self, first_time=False):
 ```
 
 ## b) Collecte des scores
-
 ```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
 #fichier texte pour stocker les scores
 with open('scores.txt', 'r') as file:
   scores = [line.strip() for line in file.readlines()]
   print(scores)
-                
-#tri pour classer les scores 
-def triDamien(elem):
-    elem=elem[-4:]
-    if elem[0]=='-':
-        if elem[1]==' ':
-            elem=elem[2:]
-        else:
-            return -100
-    return int(elem)
+
+#tri pour classer les scores                
+def triD(elem):
+  if len(elem) < 4:
+    return -100
+    
+  elem = elem[-4:]
+    
+  if elem[0] == '-':
+    if elem[1] == ' ':
+      elem = elem[2:]
+    else:
+      return -100
+            
+  return int(elem)
 ```
 
 ## c) Partage du jeu
