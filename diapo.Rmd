@@ -108,7 +108,10 @@ message['Subject'] = objet
 message.attach(MIMEText(corps_message, 'plain'))
 ```
 
-## 2nd partie du code : 
+## ## c) Partage du jeu
+
+2nd partie du code :
+
 ```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
 #Ajout pièce jointe
 chemin_piece_jointe = 'C:/Users/annes/Downloads/pj_test.py'
