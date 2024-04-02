@@ -7,10 +7,10 @@
 2) Savoir compter de 1 à 9
 
 
-## Introduction   (manque à mieux expliquer le découpage du score)
+## Introduction  
 
 Dans le cadre du projet de programmation de Master1, nous avons décidé de créer, grâce à python, un jeu de Sudoku. Le code est disponible dans ce repository actuel. Il a été découpé de la manière suivante : 
-Un fichier contenant le code principal nommé "code_sudoku", ainsi que le fichier "Publipostage" sur lequel nous reviendrons un peu plus loin.
+Un fichier contenant le code principal nommé "code_sudoku", un fichier texte "scores.txt" ainsi que le fichier "Publipostage" sur lequel nous reviendrons un peu plus loin.
 La finalité de notre projet est de pouvoir partager le jeu que nous avons créé à plusieurs personnes afin de se défier en tentant d'obtenir le meilleur score possible.
 
 
@@ -27,7 +27,7 @@ Fonctionnement : il faut tout d'abord se connecter au serveur smtp de gmail et �
 Ainsi, des mails sont envoyés comportant en pièce jointe un fichier zip contenant notre code dont le code principal que les personnes devront ouvrir afin de jouer.
 
 
-## 3) Récupérer les scores (mettre plus de details)
+## 3) Récupérer les scores 
 
 Enfin, nous avons mis en place un système permettant de récupérer le score des personnes ayant joué afin de procéder à un classement. Dans le classement figure le dernier score obtenu ainsi que les 5 meilleurs de la totalité des parties.
 
