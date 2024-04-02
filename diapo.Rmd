@@ -18,7 +18,9 @@ date: "2024-04-03"
 2. Fonction pour calculer le score
 3. Fonction pour partager le jeu / Publipostage
 
-## La première fonction est :
+## a. Quelques fonctions pour le sudoku
+
+La première fonction est :
 ```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
 def generer_grille_complete(self):
   def remplir_grille(grille):
@@ -38,7 +40,8 @@ def generer_grille_complete(self):
 ```
 
 
-## La deuxième fonction est :
+## a. Quelques fonctions pour le sudoku
+La deuxième fonction est :
 ```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
 def generer_grille_partielle(self, proportion):
   self.grille_partielle = [[0 for _ in range(9)] for _ in range(9)]
@@ -54,7 +57,8 @@ def generer_grille_partielle(self, proportion):
         self.cells[i][j].config(state='normal') 
 ```
 
-## La troisième fonction est : 
+## a. Quelques fonctions pour le sudoku
+La troisième fonction est : 
 ```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
 def generer_grille_partielle_facile(self, first_time=False):
   self.generer_grille_partielle(0.45)  # 45% de cellules pré-remplis
