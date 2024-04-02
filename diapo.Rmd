@@ -1,0 +1,85 @@
+---
+title: "Projet Technique de Programmation Master 1 : Création d'un jeu de SUDOKU"
+
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+date: "2024-04-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+
+Screen de la grille ?
+
+# Sommaire
+
+## I) Présentation du projet
+
+-   Exécution du code
+
+## II) Présentation du code
+
+-   Présentation du code de la grille
+
+-   Partage du jeu
+
+-   Collecte des scores
+
+# II) Présentation du code
+
+### a) Présentation du code
+
+```{Python}
+
+```
+
+### b) Partage du jeu
+
+```{python, python.reticulate = FALSE}
+#Connexion à la messagerie
+server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+server.login("sudoku.python@gmail.com", "eaqh niof dvqv qjih")
+
+#Création du message
+expediteur = 'sudoku.python@gmail.com'
+objet = 'Sudoku'
+corps_message = "Texte"
+message = MIMEMultipart()
+message['From'] = expediteur
+message['Subject'] = objet
+message.attach(MIMEText(corps_message, 'plain'))
+
+#Ajout pièce jointe
+chemin_piece_jointe = 'C:/Users/annes/Downloads/pj_test.py'
+nom_piece_jointe = "Sudoku.py"
+message.attach(piece_jointe_mime)
+
+#Envoi
+server.sendmail(expediteur, ["xxxxx@etu.unistra.fr", "xxxx@etu.unistra.fr"], message.as_string())
+
+#Déconnexion
+server.quit()S
+```
+
+### c) Collecte des scores
+
+```{python}
+#fichier texte pour stocker les scores
+with open('scores.txt', 'r') as file:
+                scores = [line.strip() for line in file.readlines()]
+                print(scores)
+                
+#tri pour classer les scores 
+def triDamien(elem):
+    elem=elem[-4:]
+    if elem[0]=='-':
+        if elem[1]==' ':
+            elem=elem[2:]
+        else:
+            return -100
+    return int(elem)
+```
