@@ -10,13 +10,13 @@
 ## Introduction   (manque à mieux expliquer le découpage du score)
 
 Dans le cadre du projet de programmation de Master1, nous avons décidé de créer, grâce à python, un jeu de Sudoku. Le code est disponible dans ce repository actuel. Il a été découpé de la manière suivante : 
-Un fichier contenant le code principal nommé "sudoku_gui", un fichier contenant les fonctions que nous avons définies, un fichier pour le score et enfin le fichier "Publipostage" qui n'est pas lié aux autres et sur lequel nous reviendrons un peu plus loin.
+Un fichier contenant le code principal nommé "code_sudoku", ainsi que le fichier "Publipostage" sur lequel nous reviendrons un peu plus loin.
 La finalité de notre projet est de pouvoir partager le jeu que nous avons créé à plusieurs personnes afin de se défier en tentant d'obtenir le meilleur score possible.
 
 
 ## 1) Fonctionnement de la grille 
 
-Pour obtenir la grille du jeu, il suffit d'exécuter uniquement le code principal "sudoku_gui", à partir du fichier zip que nous aurons envoyé au préalable aux personnes invitées à jouer. Le jeu va alors s'afficher dans une fenêtre.
+Pour obtenir la grille du jeu, il suffit d'exécuter uniquement le code principal "code_sudoku", à partir de la pièce jointe que nous aurons envoyé au préalable aux personnes invitées à jouer. Le jeu va alors s'afficher dans une fenêtre.
 A gauche se trouve la grille à remplir et à droite, plusieurs boutons. Pour commencer une partie, il suffit de sélectionner "Nouvelle Partie" puis de choisir un niveau de difficulté. Le jeu ainsi que le chronomètre se lance. En fonction du niveau choisi, un nombre différent de chiffres sera déjà remplis : plus la partie est facile, plus il y aura de chiffres déjà placés. Pour remplir la grille, il faut sélectionner une case et ensuite le chiffre que l'on veut y inscrire. En cas de doute, les règles du jeu sont disponibles en haut à droite. Il est possible de mettre pause puis de reprendre le jeu, d'effacer le contenu de la case sélectionnée ainsi que de demander une aide qui donnera la réponse pour une case vide. A la fin de la partie, il faut cliquer sur "Résoudre", les chiffres n'ayant pas été placés correctement s'afficheront en rouge. Le score évolue au cours du jeu et est affiché en bas. Il est calculé de la manière suivante : En début de partie le score est de 100. Lorsque un nombre est placé correctement, il augmente de 30 et diminue de 10 en cas d'erreur. Toutes les 30 secondes, le score diminue de 15 points. A la fin de la partie, il est multiplié par 2 ou 3 en fonction de si la partie était de niveau moyen ou difficile.
 
 
@@ -29,5 +29,5 @@ Ainsi, des mails sont envoyés comportant en pièce jointe un fichier zip conten
 
 ## 3) Récupérer les scores (mettre plus de details)
 
-Enfin, nous avons mis en place un système permettant de récupérer le score des personnes ayant joué afin de procéder à un classement.
+Enfin, nous avons mis en place un système permettant de récupérer le score des personnes ayant joué afin de procéder à un classement. Dans le classement figure le dernier score obtenu ainsi que les 5 meilleurs de la totalité des parties.
 
