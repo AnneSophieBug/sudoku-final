@@ -15,11 +15,10 @@ date: "2024-04-03"
 
 ## II) Présentation du code
 1.  Quelques fonctions pour programmer le sudoku
-2. Fonction pour calculer le score
-3. Fonction pour partager le jeu / Publipostage
+2.  Partager le jeu / Publipostage
+3. Fonction pour calculer le score
 
 ## a. Quelques fonctions pour le sudoku
-
 La première fonction est :
 ```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
 def generer_grille_complete(self):
@@ -67,7 +66,39 @@ def generer_grille_partielle_facile(self, first_time=False):
       self.start_chronometer()
 ```
 
-## b) Collecte des scores
+## b) Partage du jeu
+1er partie du code : 
+```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
+#Connexion à la messagerie
+server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+server.login("sudoku.python@gmail.com", "eaqh niof dvqv qjih")
+
+#Création du message
+expediteur = 'sudoku.python@gmail.com'
+objet = 'Sudoku'
+corps_message = "Texte"
+message = MIMEMultipart()
+message['From'] = expediteur
+message['Subject'] = objet
+message.attach(MIMEText(corps_message, 'plain'))
+```
+
+## b) Partage du jeu
+2nd partie du code : 
+```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
+#Ajout pièce jointe
+chemin_piece_jointe = 'C:/Users/annes/Downloads/pj_test.py'
+nom_piece_jointe = "Sudoku.py"
+message.attach(piece_jointe_mime)
+
+#Envoi
+server.sendmail(expediteur, ["xxxxx@etu.unistra.fr", "xxxx@etu.unistra.fr"], message.as_string())
+
+#Déconnexion
+server.quit()
+```
+
+## c) Collecte des scores
 ```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
 #fichier texte pour stocker les scores
 with open('scores.txt', 'r') as file:
@@ -88,39 +119,4 @@ def triD(elem):
       return -100
             
   return int(elem)
-```
-
-## c) Partage du jeu
-
-1er partie du code : 
-```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
-#Connexion à la messagerie
-server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-server.login("sudoku.python@gmail.com", "eaqh niof dvqv qjih")
-
-#Création du message
-expediteur = 'sudoku.python@gmail.com'
-objet = 'Sudoku'
-corps_message = "Texte"
-message = MIMEMultipart()
-message['From'] = expediteur
-message['Subject'] = objet
-message.attach(MIMEText(corps_message, 'plain'))
-```
-
-## ## c) Partage du jeu
-
-2nd partie du code :
-
-```{python, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
-#Ajout pièce jointe
-chemin_piece_jointe = 'C:/Users/annes/Downloads/pj_test.py'
-nom_piece_jointe = "Sudoku.py"
-message.attach(piece_jointe_mime)
-
-#Envoi
-server.sendmail(expediteur, ["xxxxx@etu.unistra.fr", "xxxx@etu.unistra.fr"], message.as_string())
-
-#Déconnexion
-server.quit()
 ```
